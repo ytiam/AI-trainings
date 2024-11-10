@@ -1,0 +1,1 @@
+{"batch_size": 8, "block_size": 32, "max_iters": 3000, "eval_interval": 100, "learning_rate": 0.0001, "eval_iters": 200, "n_embd": 768, "n_head": 4, "n_blocks": 6, "dropout": 0.3}
