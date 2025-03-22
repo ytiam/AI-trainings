@@ -1,2 +1,6 @@
 *.model
 *.vocab
+*.pth
+*.pt
+
+data/
