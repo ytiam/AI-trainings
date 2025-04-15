@@ -1,0 +1,45 @@
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Configure stats pid to 21
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Loading settings from /home/git/AI-trainings/visual-language-model/wandb/settings
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_setup.py:_flush():76] Applying login settings: {}
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:_log_setup():521] Logging user logs to /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/logs/debug.log
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:_log_setup():522] Logging internal logs to /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/logs/debug-internal.log
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:_jupyter_setup():467] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7a7dc26c7e20>
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:init():561] calling init triggers
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'epochs': 3, 'batch_size': 20, 'lr': 1.1999999999999999e-05}
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:init():611] starting backend
+2025-04-13 17:34:37,332 INFO    MainThread:21 [wandb_init.py:init():615] setting up manager
+2025-04-13 17:34:37,333 INFO    MainThread:21 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-13 17:34:37,334 INFO    MainThread:21 [wandb_init.py:init():623] backend started and connected
+2025-04-13 17:34:37,339 INFO    MainThread:21 [wandb_run.py:_label_probe_notebook():1299] probe notebook
+2025-04-13 17:34:37,340 INFO    MainThread:21 [wandb_run.py:_label_probe_notebook():1309] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-04-13 17:34:37,340 INFO    MainThread:21 [wandb_init.py:init():715] updated telemetry
+2025-04-13 17:34:37,350 INFO    MainThread:21 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2025-04-13 17:34:38,360 INFO    MainThread:21 [wandb_run.py:_on_init():2357] communicating current version
+2025-04-13 17:34:38,739 INFO    MainThread:21 [wandb_run.py:_on_init():2366] got version response upgrade_message: "wandb version 0.19.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2025-04-13 17:34:38,739 INFO    MainThread:21 [wandb_init.py:init():799] starting run threads in backend
+2025-04-13 17:34:44,715 INFO    MainThread:21 [wandb_run.py:_console_start():2335] atexit reg
+2025-04-13 17:34:44,715 INFO    MainThread:21 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2025-04-13 17:34:44,716 INFO    MainThread:21 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2025-04-13 17:34:44,716 INFO    MainThread:21 [wandb_run.py:_redirect():2280] Redirects installed.
+2025-04-13 17:34:44,716 INFO    MainThread:21 [wandb_init.py:init():842] run started, returning control to user process
+2025-04-13 17:34:44,718 INFO    MainThread:21 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2025-04-13 17:34:44,718 INFO    MainThread:21 [wandb_init.py:_pause_backend():432] pausing backend
+2025-04-13 17:35:08,159 INFO    MainThread:21 [wandb_init.py:_resume_backend():437] resuming backend
+2025-04-13 17:35:08,160 INFO    MainThread:21 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2025-04-13 17:35:08,161 INFO    MainThread:21 [wandb_init.py:_pause_backend():432] pausing backend
+2025-04-13 17:35:08,668 INFO    MainThread:21 [wandb_init.py:_resume_backend():437] resuming backend
+2025-04-13 17:35:08,676 INFO    MainThread:21 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2025-04-13 17:35:08,677 INFO    MainThread:21 [wandb_init.py:_pause_backend():432] pausing backend
+2025-04-13 17:35:12,123 INFO    MainThread:21 [wandb_init.py:_resume_backend():437] resuming backend
+2025-04-13 17:35:12,127 INFO    MainThread:21 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2025-04-13 17:35:12,127 INFO    MainThread:21 [wandb_init.py:_pause_backend():432] pausing backend
+2025-04-13 17:35:13,147 INFO    MainThread:21 [wandb_init.py:_resume_backend():437] resuming backend
+2025-04-13 17:37:05,252 INFO    MainThread:21 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2025-04-13 17:37:05,252 INFO    MainThread:21 [wandb_init.py:_pause_backend():432] pausing backend

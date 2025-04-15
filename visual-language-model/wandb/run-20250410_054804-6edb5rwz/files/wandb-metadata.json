@@ -1,0 +1,107 @@
+{
+    "os": "Linux-6.8.0-57-generic-x86_64-with-glibc2.31",
+    "python": "3.10.11",
+    "heartbeatAt": "2025-04-10T05:48:18.426603",
+    "startedAt": "2025-04-10T05:48:04.252376",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "home/git/AI-trainings/visual-language-model/2_modeling_clean_vit_pretrained_custom_tokenizer-wandb.ipynb",
+    "codePathLocal": null,
+    "root": "/home/git/AI-trainings",
+    "git": {
+        "remote": "https://github.com/ytiam/AI-trainings.git",
+        "commit": "9a63795c23a3843481e4dca843836ee2b2e7e74e"
+    },
+    "email": "amrkmrc@gmail.com",
+    "host": "ytiam",
+    "username": "root",
+    "executable": "/opt/conda/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3.3630833333333334,
+        "min": 800.0,
+        "max": 5000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4.298,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.304,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 2.649,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.301,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3.809,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 0.8,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 0.8,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 2.206,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.289,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 4.3,
+            "min": 800.0,
+            "max": 5000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 50.3548583984375,
+            "used": 37.308589935302734
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.439613342285156
+    }
+}

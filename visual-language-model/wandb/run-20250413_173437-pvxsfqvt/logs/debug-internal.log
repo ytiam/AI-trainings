@@ -1,0 +1,304 @@
+2025-04-13 17:34:37,334 INFO    StreamThr :97 [internal.py:wandb_internal():86] W&B internal server running at pid: 97, started at: 2025-04-13 17:34:37.334275
+2025-04-13 17:34:37,335 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status
+2025-04-13 17:34:37,341 INFO    WriterThread:97 [datastore.py:open_for_write():87] open: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/run-pvxsfqvt.wandb
+2025-04-13 17:34:37,343 DEBUG   SenderThread:97 [sender.py:send():379] send: header
+2025-04-13 17:34:37,350 DEBUG   SenderThread:97 [sender.py:send():379] send: run
+2025-04-13 17:34:38,353 INFO    SenderThread:97 [dir_watcher.py:__init__():211] watching files in: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files
+2025-04-13 17:34:38,353 INFO    SenderThread:97 [sender.py:_start_run_threads():1124] run started: pvxsfqvt with start time 1744565677.334202
+2025-04-13 17:34:38,361 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: check_version
+2025-04-13 17:34:38,361 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: check_version
+2025-04-13 17:34:38,742 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: run_start
+2025-04-13 17:34:40,326 DEBUG   HandlerThread:97 [system_info.py:__init__():26] System info init
+2025-04-13 17:34:40,326 DEBUG   HandlerThread:97 [system_info.py:__init__():41] System info init done
+2025-04-13 17:34:40,326 INFO    HandlerThread:97 [system_monitor.py:start():194] Starting system monitor
+2025-04-13 17:34:40,326 INFO    SystemMonitor:97 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-13 17:34:40,326 INFO    HandlerThread:97 [system_monitor.py:probe():214] Collecting system info
+2025-04-13 17:34:40,326 INFO    SystemMonitor:97 [interfaces.py:start():190] Started cpu monitoring
+2025-04-13 17:34:40,327 INFO    SystemMonitor:97 [interfaces.py:start():190] Started disk monitoring
+2025-04-13 17:34:40,327 INFO    SystemMonitor:97 [interfaces.py:start():190] Started gpu monitoring
+2025-04-13 17:34:40,328 INFO    SystemMonitor:97 [interfaces.py:start():190] Started memory monitoring
+2025-04-13 17:34:40,328 INFO    SystemMonitor:97 [interfaces.py:start():190] Started network monitoring
+2025-04-13 17:34:40,334 DEBUG   HandlerThread:97 [system_info.py:probe():150] Probing system
+2025-04-13 17:34:40,335 DEBUG   HandlerThread:97 [system_info.py:_probe_git():135] Probing git
+2025-04-13 17:34:40,338 DEBUG   HandlerThread:97 [system_info.py:_probe_git():143] Probing git done
+2025-04-13 17:34:40,338 DEBUG   HandlerThread:97 [system_info.py:probe():198] Probing system done
+2025-04-13 17:34:40,338 DEBUG   HandlerThread:97 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-57-generic-x86_64-with-glibc2.31', 'python': '3.10.11', 'heartbeatAt': '2025-04-13T17:34:40.334144', 'startedAt': '2025-04-13T17:34:37.331203', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'home/git/AI-trainings/visual-language-model/2_modeling_clean_vit_pretrained_custom_tokenizer-wandb-flicker_data.ipynb', 'codePathLocal': None, 'root': '/home/git/AI-trainings', 'git': {'remote': 'https://github.com/ytiam/AI-trainings.git', 'commit': '9a63795c23a3843481e4dca843836ee2b2e7e74e'}, 'email': 'amrkmrc@gmail.com', 'host': 'ytiam', 'username': 'root', 'executable': '/opt/conda/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3.1162499999999995, 'min': 800.0, 'max': 5000.0}, 'cpu_freq_per_core': [{'current': 4.426, 'min': 800.0, 'max': 5000.0}, {'current': 4.5, 'min': 800.0, 'max': 5000.0}, {'current': 4.48, 'min': 800.0, 'max': 5000.0}, {'current': 0.8, 'min': 800.0, 'max': 5000.0}, {'current': 4.499, 'min': 800.0, 'max': 5000.0}, {'current': 4.502, 'min': 800.0, 'max': 5000.0}, {'current': 0.8, 'min': 800.0, 'max': 5000.0}, {'current': 0.8, 'min': 800.0, 'max': 5000.0}, {'current': 0.8, 'min': 800.0, 'max': 5000.0}, {'current': 4.299, 'min': 800.0, 'max': 5000.0}, {'current': 4.578, 'min': 800.0, 'max': 5000.0}, {'current': 4.564, 'min': 800.0, 'max': 5000.0}], 'disk': {'/': {'total': 50.3548583984375, 'used': 38.04555892944336}}, 'gpu': 'NVIDIA GeForce RTX 2060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2060', 'memory_total': 6442450944}], 'memory': {'total': 15.439613342285156}}
+2025-04-13 17:34:40,338 INFO    HandlerThread:97 [system_monitor.py:probe():224] Finished collecting system info
+2025-04-13 17:34:40,338 INFO    HandlerThread:97 [system_monitor.py:probe():227] Publishing system info
+2025-04-13 17:34:40,338 DEBUG   HandlerThread:97 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2025-04-13 17:34:40,354 INFO    Thread-12 :97 [dir_watcher.py:_on_file_created():271] file/dir created: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/conda-environment.yaml
+2025-04-13 17:34:44,561 DEBUG   HandlerThread:97 [system_info.py:_save_conda():222] Saving conda packages done
+2025-04-13 17:34:44,561 INFO    HandlerThread:97 [system_monitor.py:probe():229] Finished publishing system info
+2025-04-13 17:34:44,564 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:34:44,564 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: keepalive
+2025-04-13 17:34:44,564 DEBUG   SenderThread:97 [sender.py:send():379] send: files
+2025-04-13 17:34:44,564 INFO    SenderThread:97 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2025-04-13 17:34:44,715 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: python_packages
+2025-04-13 17:34:44,715 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: python_packages
+2025-04-13 17:34:44,715 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:34:44,716 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:34:44,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:34:44,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: pause
+2025-04-13 17:34:44,718 INFO    HandlerThread:97 [handler.py:handle_request_pause():708] stopping system metrics thread
+2025-04-13 17:34:44,718 INFO    HandlerThread:97 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-13 17:34:44,718 DEBUG   SystemMonitor:97 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-13 17:34:44,719 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-13 17:34:44,719 DEBUG   SystemMonitor:97 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-13 17:34:44,719 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined disk monitor
+2025-04-13 17:34:44,719 DEBUG   SystemMonitor:97 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-13 17:34:44,723 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-13 17:34:44,723 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined memory monitor
+2025-04-13 17:34:44,723 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined network monitor
+2025-04-13 17:34:45,189 DEBUG   SenderThread:97 [sender.py:send():379] send: telemetry
+2025-04-13 17:34:45,189 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:34:45,354 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/conda-environment.yaml
+2025-04-13 17:34:45,355 INFO    Thread-12 :97 [dir_watcher.py:_on_file_created():271] file/dir created: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/requirements.txt
+2025-04-13 17:34:45,355 INFO    Thread-12 :97 [dir_watcher.py:_on_file_created():271] file/dir created: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/wandb-metadata.json
+2025-04-13 17:34:45,820 INFO    wandb-upload_0:97 [upload_job.py:push():131] Uploaded file /tmp/tmpkuha0y1gwandb/gqzzris6-wandb-metadata.json
+2025-04-13 17:34:48,191 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:34:53,193 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:34:58,194 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:34:59,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:34:59,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:34:59,720 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:35:04,154 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:08,159 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: resume
+2025-04-13 17:35:08,160 INFO    HandlerThread:97 [handler.py:handle_request_resume():699] starting system metrics thread
+2025-04-13 17:35:08,160 INFO    HandlerThread:97 [system_monitor.py:start():194] Starting system monitor
+2025-04-13 17:35:08,160 INFO    SystemMonitor:97 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-13 17:35:08,162 INFO    SystemMonitor:97 [interfaces.py:start():190] Started cpu monitoring
+2025-04-13 17:35:08,162 INFO    SystemMonitor:97 [interfaces.py:start():190] Started disk monitoring
+2025-04-13 17:35:08,164 INFO    SystemMonitor:97 [interfaces.py:start():190] Started gpu monitoring
+2025-04-13 17:35:08,166 INFO    SystemMonitor:97 [interfaces.py:start():190] Started memory monitoring
+2025-04-13 17:35:08,169 INFO    SystemMonitor:97 [interfaces.py:start():190] Started network monitoring
+2025-04-13 17:35:08,200 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: pause
+2025-04-13 17:35:08,200 INFO    HandlerThread:97 [handler.py:handle_request_pause():708] stopping system metrics thread
+2025-04-13 17:35:08,200 INFO    HandlerThread:97 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-13 17:35:08,201 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-13 17:35:08,202 DEBUG   SystemMonitor:97 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-13 17:35:08,202 DEBUG   SystemMonitor:97 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-13 17:35:08,202 DEBUG   SystemMonitor:97 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-13 17:35:08,204 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined disk monitor
+2025-04-13 17:35:09,823 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-13 17:35:09,824 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined memory monitor
+2025-04-13 17:35:09,824 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined network monitor
+2025-04-13 17:35:09,824 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: resume
+2025-04-13 17:35:09,824 INFO    HandlerThread:97 [handler.py:handle_request_resume():699] starting system metrics thread
+2025-04-13 17:35:09,824 INFO    HandlerThread:97 [system_monitor.py:start():194] Starting system monitor
+2025-04-13 17:35:09,824 INFO    SystemMonitor:97 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-13 17:35:09,824 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: pause
+2025-04-13 17:35:09,824 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:35:09,824 INFO    SystemMonitor:97 [interfaces.py:start():190] Started cpu monitoring
+2025-04-13 17:35:09,825 INFO    HandlerThread:97 [handler.py:handle_request_pause():708] stopping system metrics thread
+2025-04-13 17:35:09,826 INFO    HandlerThread:97 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-13 17:35:09,826 INFO    SystemMonitor:97 [interfaces.py:start():190] Started disk monitoring
+2025-04-13 17:35:09,826 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-13 17:35:09,826 DEBUG   SystemMonitor:97 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-13 17:35:09,826 DEBUG   SystemMonitor:97 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-13 17:35:09,826 DEBUG   SystemMonitor:97 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-13 17:35:09,828 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined disk monitor
+2025-04-13 17:35:09,828 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:09,828 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:35:10,371 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/config.yaml
+2025-04-13 17:35:12,124 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: resume
+2025-04-13 17:35:12,124 INFO    HandlerThread:97 [handler.py:handle_request_resume():699] starting system metrics thread
+2025-04-13 17:35:12,124 INFO    HandlerThread:97 [system_monitor.py:start():194] Starting system monitor
+2025-04-13 17:35:12,124 INFO    SystemMonitor:97 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-13 17:35:12,125 INFO    SystemMonitor:97 [interfaces.py:start():190] Started cpu monitoring
+2025-04-13 17:35:12,125 INFO    SystemMonitor:97 [interfaces.py:start():190] Started disk monitoring
+2025-04-13 17:35:12,125 INFO    SystemMonitor:97 [interfaces.py:start():190] Started gpu monitoring
+2025-04-13 17:35:12,126 INFO    SystemMonitor:97 [interfaces.py:start():190] Started memory monitoring
+2025-04-13 17:35:12,127 INFO    SystemMonitor:97 [interfaces.py:start():190] Started network monitoring
+2025-04-13 17:35:12,128 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: pause
+2025-04-13 17:35:12,128 INFO    HandlerThread:97 [handler.py:handle_request_pause():708] stopping system metrics thread
+2025-04-13 17:35:12,128 INFO    HandlerThread:97 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-13 17:35:12,128 DEBUG   SystemMonitor:97 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-13 17:35:12,128 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-13 17:35:12,128 DEBUG   SystemMonitor:97 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-13 17:35:12,128 DEBUG   SystemMonitor:97 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-13 17:35:12,129 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined disk monitor
+2025-04-13 17:35:12,132 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-13 17:35:12,132 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined memory monitor
+2025-04-13 17:35:12,132 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined network monitor
+2025-04-13 17:35:12,132 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:35:13,148 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: resume
+2025-04-13 17:35:13,148 INFO    HandlerThread:97 [handler.py:handle_request_resume():699] starting system metrics thread
+2025-04-13 17:35:13,148 INFO    HandlerThread:97 [system_monitor.py:start():194] Starting system monitor
+2025-04-13 17:35:13,149 INFO    SystemMonitor:97 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-04-13 17:35:13,150 INFO    SystemMonitor:97 [interfaces.py:start():190] Started cpu monitoring
+2025-04-13 17:35:13,151 INFO    SystemMonitor:97 [interfaces.py:start():190] Started disk monitoring
+2025-04-13 17:35:13,152 INFO    SystemMonitor:97 [interfaces.py:start():190] Started gpu monitoring
+2025-04-13 17:35:13,153 INFO    SystemMonitor:97 [interfaces.py:start():190] Started memory monitoring
+2025-04-13 17:35:13,154 INFO    SystemMonitor:97 [interfaces.py:start():190] Started network monitoring
+2025-04-13 17:35:13,374 INFO    Thread-12 :97 [dir_watcher.py:_on_file_created():271] file/dir created: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:35:14,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:35:14,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:35:14,719 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:35:15,113 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:15,375 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:35:20,114 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:25,115 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:29,384 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:35:29,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:35:29,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:35:29,719 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:35:30,166 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:35,166 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:40,760 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:41,390 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:35:44,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:35:44,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:35:44,718 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:35:46,323 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:51,324 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:55,398 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:35:56,369 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:35:59,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:35:59,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:35:59,718 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:36:02,169 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:07,170 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:09,405 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:36:12,832 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:13,154 DEBUG   SystemMonitor:97 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-04-13 17:36:13,156 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:36:14,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:36:14,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:36:14,717 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:36:18,223 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:23,415 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:36:23,913 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:28,914 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:29,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:36:29,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:36:29,718 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:36:34,084 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:35,422 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:36:39,126 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:43,157 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:36:44,494 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:44,719 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:36:44,719 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:36:44,720 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:36:45,432 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:36:50,044 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:55,045 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:36:57,440 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:36:59,717 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: stop_status
+2025-04-13 17:36:59,718 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: internal_messages
+2025-04-13 17:36:59,718 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: stop_status
+2025-04-13 17:37:00,179 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:37:05,253 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: pause
+2025-04-13 17:37:05,253 INFO    HandlerThread:97 [handler.py:handle_request_pause():708] stopping system metrics thread
+2025-04-13 17:37:05,253 INFO    HandlerThread:97 [system_monitor.py:finish():203] Stopping system monitor
+2025-04-13 17:37:05,253 DEBUG   SystemMonitor:97 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-04-13 17:37:05,253 DEBUG   SystemMonitor:97 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-04-13 17:37:05,254 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined cpu monitor
+2025-04-13 17:37:05,254 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined disk monitor
+2025-04-13 17:37:05,262 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined gpu monitor
+2025-04-13 17:37:05,262 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined memory monitor
+2025-04-13 17:37:05,262 INFO    HandlerThread:97 [interfaces.py:finish():202] Joined network monitor
+2025-04-13 17:37:05,263 DEBUG   SenderThread:97 [sender.py:send():379] send: stats
+2025-04-13 17:37:05,263 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:37:05,450 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:37:05,473 DEBUG   SenderThread:97 [sender.py:send():379] send: exit
+2025-04-13 17:37:05,473 INFO    SenderThread:97 [sender.py:send_exit():586] handling exit code: 0
+2025-04-13 17:37:05,473 INFO    SenderThread:97 [sender.py:send_exit():588] handling runtime: 119
+2025-04-13 17:37:05,473 INFO    SenderThread:97 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2025-04-13 17:37:05,473 INFO    SenderThread:97 [sender.py:send_exit():594] send defer
+2025-04-13 17:37:05,473 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,473 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 0
+2025-04-13 17:37:05,474 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 0
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 1
+2025-04-13 17:37:05,474 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,474 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 1
+2025-04-13 17:37:05,474 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 1
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 2
+2025-04-13 17:37:05,474 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,474 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 2
+2025-04-13 17:37:05,474 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 2
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 3
+2025-04-13 17:37:05,474 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,474 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 3
+2025-04-13 17:37:05,474 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 3
+2025-04-13 17:37:05,474 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 4
+2025-04-13 17:37:05,475 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,475 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 4
+2025-04-13 17:37:05,475 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,475 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 4
+2025-04-13 17:37:05,475 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 5
+2025-04-13 17:37:05,475 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,475 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 5
+2025-04-13 17:37:05,475 DEBUG   SenderThread:97 [sender.py:send():379] send: summary
+2025-04-13 17:37:05,475 INFO    SenderThread:97 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2025-04-13 17:37:05,475 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,475 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 5
+2025-04-13 17:37:05,475 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 6
+2025-04-13 17:37:05,475 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,476 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 6
+2025-04-13 17:37:05,476 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,476 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 6
+2025-04-13 17:37:05,476 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 7
+2025-04-13 17:37:05,476 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:37:05,476 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:05,476 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 7
+2025-04-13 17:37:05,476 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:05,476 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 7
+2025-04-13 17:37:06,451 INFO    Thread-12 :97 [dir_watcher.py:_on_file_created():271] file/dir created: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/wandb-summary.json
+2025-04-13 17:37:06,473 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: poll_exit
+2025-04-13 17:37:07,315 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 8
+2025-04-13 17:37:07,315 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: poll_exit
+2025-04-13 17:37:07,316 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:07,316 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 8
+2025-04-13 17:37:07,316 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:07,316 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 8
+2025-04-13 17:37:07,316 INFO    SenderThread:97 [job_builder.py:build():318] Attempting to build job artifact
+2025-04-13 17:37:07,316 INFO    SenderThread:97 [job_builder.py:_get_source_type():455] is repo sourced job
+2025-04-13 17:37:07,316 INFO    SenderThread:97 [job_builder.py:_get_program_relpath():473] run is notebook based run
+2025-04-13 17:37:07,331 INFO    SenderThread:97 [job_builder.py:build():431] adding wandb-job metadata file
+2025-04-13 17:37:07,345 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 9
+2025-04-13 17:37:07,345 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:07,346 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 9
+2025-04-13 17:37:07,346 DEBUG   SenderThread:97 [sender.py:send():379] send: artifact
+2025-04-13 17:37:07,451 INFO    Thread-12 :97 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:37:07,474 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: poll_exit
+2025-04-13 17:37:09,497 INFO    SenderThread:97 [sender.py:send_artifact():1468] sent artifact job-https___github.com_ytiam_AI-trainings.git_home_git_AI-train.._clean_vit_pretrained_custom_tokenizer-wandb-flicker_data.ipynb - {'id': 'QXJ0aWZhY3Q6MTY1MTk2MjE5NA==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYxMTE1NjE2Mg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTY1MTk2MjE5NA==', 'versionIndex': 1}}}
+2025-04-13 17:37:09,497 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:09,498 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 9
+2025-04-13 17:37:09,498 INFO    SenderThread:97 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-04-13 17:37:10,453 INFO    SenderThread:97 [dir_watcher.py:finish():388] scan: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files
+2025-04-13 17:37:10,454 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/wandb-summary.json wandb-summary.json
+2025-04-13 17:37:10,454 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/requirements.txt requirements.txt
+2025-04-13 17:37:10,460 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/conda-environment.yaml conda-environment.yaml
+2025-04-13 17:37:10,467 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/wandb-metadata.json wandb-metadata.json
+2025-04-13 17:37:10,468 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/config.yaml config.yaml
+2025-04-13 17:37:10,474 INFO    SenderThread:97 [dir_watcher.py:finish():402] scan save: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log output.log
+2025-04-13 17:37:10,480 INFO    SenderThread:97 [sender.py:transition_state():614] send defer: 10
+2025-04-13 17:37:10,481 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: poll_exit
+2025-04-13 17:37:10,487 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: defer
+2025-04-13 17:37:10,487 INFO    HandlerThread:97 [handler.py:handle_request_defer():172] handle defer: 10
+2025-04-13 17:37:10,487 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: status_report
+2025-04-13 17:37:10,488 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: defer
+2025-04-13 17:37:10,489 INFO    SenderThread:97 [sender.py:send_request_defer():610] handle sender defer: 10
+2025-04-13 17:37:10,489 INFO    SenderThread:97 [file_pusher.py:finish():172] shutting down file pusher
+2025-04-13 17:37:10,492 WARNING StreamThr :97 [internal.py:is_dead():414] Internal process exiting, parent pid 21 disappeared
+2025-04-13 17:37:10,492 ERROR   StreamThr :97 [internal.py:wandb_internal():152] Internal process shutdown.
+2025-04-13 17:37:11,192 INFO    wandb-upload_0:97 [upload_job.py:push():131] Uploaded file /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/wandb-summary.json
+2025-04-13 17:37:11,439 INFO    wandb-upload_1:97 [upload_job.py:push():131] Uploaded file /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/requirements.txt
+2025-04-13 17:37:11,476 DEBUG   HandlerThread:97 [handler.py:handle_request():146] handle_request: poll_exit
+2025-04-13 17:37:11,477 INFO    HandlerThread:97 [handler.py:finish():866] shutting down handler
+2025-04-13 17:37:11,477 INFO    WriterThread:97 [datastore.py:close():296] close: /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/run-pvxsfqvt.wandb
+2025-04-13 17:37:11,478 DEBUG   SenderThread:97 [sender.py:send_request():406] send_request: poll_exit
+2025-04-13 17:37:11,478 INFO    SenderThread:97 [sender.py:finish():1546] shutting down sender
+2025-04-13 17:37:11,479 INFO    SenderThread:97 [file_pusher.py:finish():172] shutting down file pusher
+2025-04-13 17:37:11,479 INFO    SenderThread:97 [file_pusher.py:join():178] waiting for file pusher
+2025-04-13 17:37:11,498 INFO    wandb-upload_3:97 [upload_job.py:push():131] Uploaded file /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/config.yaml
+2025-04-13 17:37:11,508 INFO    wandb-upload_4:97 [upload_job.py:push():131] Uploaded file /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/output.log
+2025-04-13 17:37:11,536 INFO    wandb-upload_2:97 [upload_job.py:push():131] Uploaded file /home/git/AI-trainings/visual-language-model/wandb/run-20250413_173437-pvxsfqvt/files/conda-environment.yaml
+2025-04-13 17:37:11,737 INFO    Thread-11 (_thread_body):97 [sender.py:transition_state():614] send defer: 11
+2025-04-13 17:37:11,981 INFO    SenderThread:97 [file_stream.py:finish():614] file stream finish called
+2025-04-13 17:37:12,360 INFO    SenderThread:97 [file_stream.py:finish():618] file stream finish is done
