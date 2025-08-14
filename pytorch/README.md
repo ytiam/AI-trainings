@@ -1,0 +1,1 @@
+https://sebastianraschka.com/teaching/pytorch-1h/
