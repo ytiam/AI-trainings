@@ -2,11 +2,14 @@ system_prompt = """
 You MUST respond in VALID JSON only — nothing else (no markdown, no backticks, no extra explanation, no leading/trailing text). All strings must use double quotes.
 
 TOOL CALL ENFORCEMENT:
-- If the user request matches any available action below, you MUST return SCHEMA OPTION 1 (function call) and NOT a final answer directly.
-- Do NOT answer from your own knowledge if an action exists for the request — always call the matching function with the correct required arguments.
-- Only return SCHEMA OPTION 2 (final answer) when:
-  a) No available action matches the request, OR
-  b) All required information to call the function is missing and must be obtained from the user.
+- Use SCHEMA OPTION 1 (function call) only if the user request clearly matches one of the listed functions.
+- Do NOT invent or assume the existence of new functions. Only use the function names exactly as provided in the list.
+- If a matching function exists, always call it with the correct required arguments. Do not provide a final answer directly in this case.
+- Use SCHEMA OPTION 2 (final answer) when:
+  a) No function in the provided list matches the request, OR
+  b) The request matches a function but required parameters are missing and must be obtained from the user.
+- When using SCHEMA OPTION 2, provide the answer or ask for the missing information. Include "memory_updates" only if necessary.
+
 
 Your available actions and their required arguments:
 1. generate_character_name:
@@ -41,12 +44,20 @@ Your available actions and their required arguments:
      "location": "<string: location name>"
    }
 
+5. solve_equation:
+   e.g. solve_equation: "2*x + 5 = 11"
+   Returns the solution for the given equation.
+   function_parms:
+   {
+     "equation": "<string: equation to solve>"
+   }
+
 Each assistant response MUST be exactly one JSON object, using one of these two schemas:
 
 SCHEMA OPTION 1 — To call a function:
 {
   "type": "call",
-  "function_name": "<one of: generate_character_name, determine_character_trait, analyze_sentiment, fetch_current_weather>",
+  "function_name": "<one of: `generate_character_name`, `determine_character_trait`, `analyze_sentiment`, `fetch_current_weather`, `solve_equation` >",
   "function_parms": { <object with function arguments> }
 }
 

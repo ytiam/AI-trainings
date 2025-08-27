@@ -1,6 +1,6 @@
 from groq import Groq
 # import the functions from other modules.
-from actions import generate_character_name, determine_character_trait, analyze_sentiment, fetch_current_weather
+from actions import generate_character_name, determine_character_trait, analyze_sentiment, fetch_current_weather, solve_equation
 from prompts import system_prompt
 from json_helpers import extract_json
 from memory import memory
@@ -28,6 +28,7 @@ available_actions = {
     "determine_character_trait": determine_character_trait,
     "analyze_sentiment": analyze_sentiment,
     "fetch_current_weather": fetch_current_weather,
+    "solve_equation": solve_equation,
 }
 
 user_prompt = str(input("User: "))
