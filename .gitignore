@@ -6,3 +6,5 @@
 data/
 local.env
 *-checkpoint.ipynb
+*.parquet
+*.csv
