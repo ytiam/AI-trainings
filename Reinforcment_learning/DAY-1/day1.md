@@ -1,0 +1,5 @@
+- lession1: https://gymnasium.farama.org/introduction/basic_usage/
+- lession2: https://gymnasium.farama.org/introduction/train_agent/
+- Sample Scripts:
+- - Reinforcment_learning\DAY-1\RL_exp.py
+- - Reinforcment_learning\DAY-1\RL_exp_2.py
