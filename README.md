@@ -3,3 +3,4 @@
 
 ### Important Links:
 - https://blog.dailydoseofds.com/p/most-people-dont-entirely-understand
+- https://medium.com/@fareedkhandev
