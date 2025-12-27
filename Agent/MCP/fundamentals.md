@@ -555,3 +555,175 @@ If you want next, I can:
 * Compare MCP with **AutoGen / CrewAI**
 
 Just say the word.
+
+---
+
+## In MCP, in which component of it's architecture i.e. at MCP client or MCP server, where exactly the tool execution happens?
+
+In MCP (Model Context Protocol) architecture, **tool execution happens at the MCP server**.
+
+Here's how the architecture works:
+
+## The Flow
+
+1. **MCP Client** (e.g., Claude Desktop, an IDE, or another AI application):
+   - Sends tool call requests to the MCP server
+   - Receives results back from the server
+   - Does NOT execute the tools itself
+
+2. **MCP Server**:
+   - Hosts and implements the actual tools
+   - Receives tool invocation requests from the client
+   - **Executes the tool logic** (e.g., reading files, querying databases, making API calls)
+   - Returns the results back to the client
+
+## Why This Design?
+
+This separation makes sense because:
+
+- **Security**: The server controls what operations are actually performed and can implement proper access controls
+- **Resource access**: The server has direct access to the resources it needs (local filesystem, databases, APIs, etc.)
+- **Isolation**: The client doesn't need to know implementation details or have direct access to resources
+- **Flexibility**: Different servers can implement the same tool interface in different ways
+
+## Example
+
+When you use a filesystem MCP server:
+- The **client** (like Claude) decides it needs to read a file and sends a tool call request
+- The **server** receives that request, actually opens and reads the file from disk, and sends the content back
+- The **client** then receives the file content and can use it in the conversation
+
+So in short: **MCP servers execute tools, MCP clients orchestrate them**.
+
+---
+## "The server receives that request, actually opens and reads the file from disk, and sends the content back" - if I understand the line correctly, the remote server is reading my disk file content right?
+
+Good catch! Let me clarify this important distinction:
+
+## Local vs Remote MCP Servers
+
+**Most MCP servers run locally on YOUR machine**, not on a remote server. So when the MCP server reads a file from disk, it's reading from YOUR local disk, running as a process on YOUR computer.
+
+## The Architecture
+
+```
+Your Computer:
+├── MCP Client (e.g., Claude Desktop app)
+│   └── Communicates with →
+├── MCP Server (running locally as a separate process)
+│   └── Accesses YOUR local filesystem/resources
+```
+
+## How It Works
+
+1. **Local execution**: The filesystem MCP server runs as a local process on your machine
+2. **Your data stays local**: It reads files from YOUR disk
+3. **Results sent to client**: The content is then passed to the MCP client (like Claude Desktop)
+4. **Client may send to AI**: The client app then sends relevant data to Claude's API in the cloud
+
+## Privacy Implications
+
+- The **MCP server itself** runs locally and accesses your local resources
+- However, the **MCP client** (like Claude Desktop) may then send that data to Claude's API for processing
+- Your files aren't directly accessed by remote servers - only the data that the client chooses to send
+
+So no, it's not a remote server reading your disk - it's a local server process on your own machine that reads your files and provides the content to the client application.
+
+---
+## What do you mean by 
+```json
+@modelcontextprotocol/server-filesystem
+```
+
+Based on that package name `@modelcontextprotocol/server-filesystem`, let me clarify what this is:
+
+## What This Package Is
+
+This is an **official MCP server implementation** from the Model Context Protocol project that provides filesystem access capabilities.
+
+## How It Works
+
+When you install and configure this package:
+
+1. **Runs locally on your machine** as a Node.js process
+2. **You configure it** in your MCP client settings (e.g., Claude Desktop's config file)
+3. **You specify allowed directories** - it can only access paths you explicitly permit
+4. **Executes tool calls** when the client requests filesystem operations
+
+## Example Configuration
+
+In Claude Desktop, you'd configure it something like this in your config file:
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/allowed/directory"
+      ]
+    }
+  }
+}
+```
+
+## Key Points
+
+- **Local execution**: Runs as a subprocess on your computer
+- **Permission-based**: Only accesses directories you explicitly allow
+- **Standard MCP protocol**: Implements the standard MCP server interface
+- **Your control**: You decide what paths it can access
+
+So this package is a local server that you run on your own machine to give MCP clients (like Claude Desktop) controlled access to your filesystem through the MCP protocol.
+
+Does this match what you're trying to understand about MCP servers?
+
+---
+## So when I configure the config file with this settings, the npm automatically installs the tool from the remote repo to my local machine right?
+
+Not quite! Let me clarify what happens:
+
+## What `npx` Does
+
+When you use `npx -y @modelcontextprotocol/server-filesystem` in the config:
+
+1. **First run**: `npx` checks if the package is installed locally
+2. **If not found**: It downloads and caches the package temporarily
+3. **Executes it**: Runs the package directly from the cache
+4. **The `-y` flag**: Automatically says "yes" to installing without prompting
+
+## When Does Installation Happen?
+
+The installation happens **when the MCP client (like Claude Desktop) first starts and tries to launch the server**, not when you edit the config file.
+
+- **Config file editing**: Just saves text, nothing is installed yet
+- **Client startup**: When Claude Desktop starts, it reads the config and launches the MCP servers
+- **That's when `npx` runs**: And downloads/caches the package if needed
+
+## Alternative: Pre-install
+
+You can also pre-install it globally:
+
+```bash
+npm install -g @modelcontextprotocol/server-filesystem
+```
+
+Then update your config to use it directly:
+
+```json
+{
+  "command": "server-filesystem",
+  "args": ["/path/to/allowed/directory"]
+}
+```
+
+## Summary
+
+- **Config file**: Just instructions, no installation
+- **npx**: Downloads and runs on-demand when the client starts
+- **Local execution**: Everything runs on your machine
+- **Remote repo**: Only accessed to download the package code initially
+
+So yes, it downloads from npm's remote repository, but only when the MCP client actually tries to start the server, not when you save the config file.
