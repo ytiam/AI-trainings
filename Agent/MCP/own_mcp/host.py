@@ -1,24 +1,28 @@
 import os
 import json
 from typing import List, Dict, Any
+import asyncio
 
 # MCP libraries for connecting to server
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-# Anthropic API for Claude
+# Anthropic API for openai
 from openai import OpenAI
 
 from dotenv import load_dotenv
-load_dotenv("C:/Users/ytiam/notebooks/AI-trainings/config/local.env")
 
-# Set up Anthropic API key (using the one you provided)
+configuration_path = os.path.join(os.path.dirname(__file__), 'config.json')
+with open(configuration_path, 'r') as config_file:
+    config = json.load(config_file)
 
-# Initialize the Anthropic client
+load_dotenv(config["env_path"])
+
+# Initialize the OpenAI client
 client = OpenAI()
 
 # Path to your MCP server
-mcp_server_path = "C:\\Users\\ytiam\\notebooks\\AI-trainings\\Agent\\MCP\\servers\\server.py"
+mcp_server_path = config["mcp_server_path"]
 print("Setup complete!")
 
 
@@ -68,8 +72,6 @@ async def discover_tools():
             print(f"{SEP}")
             return tool_info
 
-print("Tool discovery function defined")
-import asyncio
 
 async def execute_tool(tool_name: str, arguments: Dict[str, Any]):
     """
@@ -119,8 +121,6 @@ async def execute_tool(tool_name: str, arguments: Dict[str, Any]):
             
             return result
 
-print("Tool execution function defined")
-
 
 # Test the tool discovery function
 tools = asyncio.run(discover_tools())
@@ -129,9 +129,9 @@ for i, tool in enumerate(tools, 1):
     print(f"{i}. {tool['name']}: {tool['description']}")
 
 
-async def query_claude(prompt: str, tool_info: List[Dict], previous_messages=None):
+async def query_openai(prompt: str, tool_info: List[Dict], previous_messages=None):
     """
-    Send a query to Claude and process the response.
+    Send a query to openai and process the response.
     
     Args:
         prompt: User's query
@@ -139,7 +139,7 @@ async def query_claude(prompt: str, tool_info: List[Dict], previous_messages=Non
         previous_messages: Previous messages for maintaining context
         
     Returns:
-        Claude's response, potentially after executing tools
+        openai's response, potentially after executing tools
     """
     # ANSI color codes for better log visibility
     BLUE = "\033[94m"
@@ -153,11 +153,11 @@ async def query_claude(prompt: str, tool_info: List[Dict], previous_messages=Non
         previous_messages = []
     
     print(f"{PURPLE}{SEP}")
-    print("🧠 REASONING PHASE: Processing query with Claude")
+    print("🧠 REASONING PHASE: Processing query with openai")
     print(f"🔤 Query: \"{prompt}\"")
     print(f"{SEP}{RESET}")
     
-    # Format tool information for Claude
+    # Format tool information for openai
     tool_descriptions = "\n\n".join([
         f"Tool: {tool['name']}\nDescription: {tool['description']}\nSchema: {json.dumps(tool['schema'], indent=2)}"
         for tool in tool_info
@@ -193,22 +193,22 @@ For regular responses, simply respond normally.
     
     print(f"{BLUE}📡 Sending request to OpenAI API...{RESET}")
     
-    # Send the request to Claude with system as a top-level parameter
+    # Send the request to openai with system as a top-level parameter
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         max_tokens=4000,
         messages=[{"role": "system", "content": system_prompt}] + messages      # Only user and assistant messages
     )
     
-    # Get Claude's response
-    claude_response = response.choices[0].message.content
-    print(f"{GREEN}✅ Received response from Claude{RESET}")
+    # Get openai's response
+    openai_response = response.choices[0].message.content
+    print(f"{GREEN}✅ Received response from openai{RESET}")
     
     # Try to extract and parse JSON from the response
     try:
         # Look for JSON pattern in the response
         import re
-        json_match = re.search(r'(\{[\s\S]*\})', claude_response)
+        json_match = re.search(r'(\{[\s\S]*\})', openai_response)
         
         if json_match:
             json_str = json_match.group(1)
@@ -221,7 +221,7 @@ For regular responses, simply respond normally.
                 tool_name = tool_request["tool"]
                 arguments = tool_request["arguments"]
                 
-                print(f"{YELLOW}🔧 Claude wants to use tool: {tool_name}{RESET}")
+                print(f"{YELLOW}🔧 openai wants to use tool: {tool_name}{RESET}")
                 
                 # Execute the tool using our MCP client
                 tool_result = await execute_tool(tool_name, arguments)
@@ -231,12 +231,12 @@ For regular responses, simply respond normally.
                     tool_result = str(tool_result)
                 
                 # Update messages with the tool request and result
-                messages.append({"role": "assistant", "content": claude_response})
+                messages.append({"role": "assistant", "content": openai_response})
                 messages.append({"role": "user", "content": f"Tool result: {tool_result}"})
                 
-                print(f"{PURPLE}🔄 Getting Claude's interpretation of the tool result...{RESET}")
+                print(f"{PURPLE}🔄 Getting openai's interpretation of the tool result...{RESET}")
                 
-                # Get Claude's interpretation of the tool result
+                # Get openai's interpretation of the tool result
                 final_response = client.chat.completions.create(
                     model="gpt-4o-mini",
                     max_tokens=4000,
@@ -254,9 +254,73 @@ For regular responses, simply respond normally.
     print(f"{GREEN}✅ Response ready{RESET}")
     print(f"{SEP}")
 
-    return claude_response, messages
+    return openai_response, messages
 
 
-response, messages = asyncio.run(query_claude("What's the market data for Dogecoin and Solana?", tools))
-print(f"\nAssistant's response:\n{response}")
-print("Claude query function defined")
+# response, messages = asyncio.run(query_openai("What's the market data for Dogecoin and Solana?", tools))
+# print(f"\nAssistant's response:\n{response}")
+# print("openai query function defined")
+
+
+async def chat_session():
+    """
+    Run an interactive chat session with the AI agent.
+    """
+    # ANSI color codes for better log visibility
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    CYAN = "\033[96m"
+    BOLD = "\033[1m"
+    RESET = "\033[0m"
+    SEP = "=" * 50
+    
+    print(f"{CYAN}{BOLD}{SEP}")
+    print("🤖 INITIALIZING MCP AGENT")
+    print(f"{SEP}{RESET}")
+    
+    # Make sure 'tools' is defined from a previous cell, or discover them again
+    try:
+        # Check if tools is defined and not empty
+        if 'tools' not in globals() or not tools:
+            print(f"{BLUE}🔍 No tools found, discovering available tools...{RESET}")
+            tools_local = await discover_tools()
+        else:
+            tools_local = tools
+            
+        print(f"{GREEN}✅ Agent ready with {len(tools_local)} tools:{RESET}")
+        
+        # Print the available tools for reference
+        for i, tool in enumerate(tools_local, 1):
+            print(f"{YELLOW}  {i}. {tool['name']}{RESET}")
+            print(f"     {tool['description'].strip()}")
+        
+        # Start the chat session
+        print(f"\n{CYAN}{BOLD}{SEP}")
+        print(f"💬 INTERACTIVE CHAT SESSION")
+        print(f"{SEP}")
+        print(f"Type 'exit' or 'quit' to end the session{RESET}")
+        
+        messages = []
+        
+        while True:
+            # Get user input
+            user_input = input(f"\n{BOLD}You:{RESET} ")
+            
+            # Check if user wants to exit
+            if user_input.lower() in ['exit', 'quit']:
+                print(f"\n{GREEN}Ending chat session. Goodbye!{RESET}")
+                break
+            
+            # Process the query with openai
+            print(f"\n{BLUE}Processing...{RESET}")
+            response, messages = await query_openai(user_input, tools_local, messages)
+            
+            # Display openai's response
+            print(f"\n{BOLD}Assistant:{RESET} {response}")
+            
+    except Exception as e:
+        print(f"\n{YELLOW}⚠️ An error occurred: {str(e)}{RESET}")
+
+if __name__ == "__main__":
+    asyncio.run(chat_session())
