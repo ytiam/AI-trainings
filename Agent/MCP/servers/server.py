@@ -60,6 +60,64 @@ async def get_crypto_price(crypto_id: str, currency: str = "usd") -> str:
 
 # You can add more tools here, following the same pattern as above
 
+@mcp.tool()
+async def get_crypto_market_info(crypto_ids: str, currency: str = "usd") -> str:
+    """
+    Get market information for one or more cryptocurrencies.
+    
+    Parameters:
+    - crypto_ids: Comma-separated list of cryptocurrency IDs (e.g., 'bitcoin,ethereum')
+    - currency: The currency to display values in (default: 'usd')
+    
+    Returns:
+    - Market information including price, market cap, volume, and price changes
+    """
+    # Construct the API URL
+    url = f"{COINGECKO_BASE_URL}/coins/markets"
+    
+    # Set up the query parameters
+    params = {
+        "vs_currency": currency,  # Currency to display values in
+        "ids": crypto_ids,        # Comma-separated crypto IDs
+        "order": "market_cap_desc", # Order by market cap
+        "page": 1,                # Page number
+        "sparkline": "false"      # Exclude sparkline data
+    }
+    
+    try:
+        # Make the API call
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, params=params)
+            response.raise_for_status()
+            
+            # Parse the response
+            data = response.json()
+            
+            # Check if we got any data
+            if not data:
+                return f"No data found for cryptocurrencies: '{crypto_ids}'. Please check the IDs and try again."
+            
+            # Format the results
+            result = ""
+            for crypto in data:
+                name = crypto.get('name', 'Unknown')
+                symbol = crypto.get('symbol', '???').upper()
+                price = crypto.get('current_price', 'Unknown')
+                market_cap = crypto.get('market_cap', 'Unknown')
+                volume = crypto.get('total_volume', 'Unknown')
+                price_change = crypto.get('price_change_percentage_24h', 'Unknown')
+                
+                result += f"{name} ({symbol}):\n"
+                result += f"Current price: {price} {currency.upper()}\n"
+                result += f"Market cap: {market_cap} {currency.upper()}\n"
+                result += f"24h trading volume: {volume} {currency.upper()}\n"
+                result += f"24h price change: {price_change}%\n\n"
+            
+            return result
+            
+    except Exception as e:
+        return f"Error fetching market data: {str(e)}"
+
 # Run the MCP server
 # This will start the server and listen for incoming requests
 if __name__ == "__main__":

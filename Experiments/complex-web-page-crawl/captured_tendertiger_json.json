@@ -1,0 +1,279 @@
+[
+  {
+    "url": "https://tendertiger.co.in/Result/GetResultList",
+    "data": {
+      "KeywordList": [
+        {
+          "id": 1,
+          "tablename": "",
+          "keyword": "netweb tcehnologies india private limited",
+          "tab": "competitor",
+          "shortname": "(competitor)"
+        }
+      ],
+      "MainKeywordList": [
+        {
+          "keyword": "netweb tcehnologies india private limited"
+        }
+      ],
+      "TenderList": [
+        {
+          "cityname": "not classified",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "14-07-2025",
+          "resultdate": "15-07-2025",
+          "resultdetails": "i7 desktop computer   100 nos.",
+          "resultid": "8696698",
+          "encresultid": "7qwRWEFI9kqB0G33QFFN+Q==",
+          "resulttenderno": "2024_au_511237_1",
+          "resultvalue": "6112400.0",
+          "resultcompanyname": "anna university",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "",
+          "isgem": "0",
+          "resulttenderprodid": "0",
+          "enctenderprodid": "PJMc0gvEUXQbpdEDBpbhYA==",
+          "like": -1,
+          "istechnical": "1",
+          "isfinancial": "1",
+          "isaoc": "1",
+          "tender_typewise": null
+        },
+        {
+          "cityname": "chennai",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "02-09-2024",
+          "resultdate": "04-09-2024",
+          "resultdetails": "supply and installation of workstation at an approximate cost of rs. 71  00  000   for the department of computer science engineering through ramanujan computing centre  anna university",
+          "resultid": "6412556",
+          "encresultid": "9YIOfGJq8VibIJr0ZdsVZw==",
+          "resulttenderno": "2024_au_416731_1",
+          "resultvalue": "5908260.0",
+          "resultcompanyname": "anna university",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "netweb tcehnologies india pvt ltd",
+          "isgem": "0",
+          "resulttenderprodid": "71134649",
+          "enctenderprodid": "wFtW0LdbZptECPolfFA+TIz6zG68AiM4fj0Q/QnCHjk=",
+          "like": -1,
+          "istechnical": "1",
+          "isfinancial": "1",
+          "isaoc": "1",
+          "tender_typewise": null
+        },
+        {
+          "cityname": "chennai",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "04-05-2022",
+          "resultdate": "08-05-2022",
+          "resultdetails": "procurement of server",
+          "resultid": "2976494",
+          "encresultid": "i7G29ZuNb/Tfzo7fqWcb7Q==",
+          "resulttenderno": "2022_dote_227849_2 ",
+          "resultvalue": "970773.0",
+          "resultcompanyname": "department of technical education",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "netweb tcehnologies india pvt ltd",
+          "isgem": "0",
+          "resulttenderprodid": "51242886",
+          "enctenderprodid": "1cNo2uAzU52FSegbrC4CXWs66A1Fln3g1VAyVmFqtgg=",
+          "like": -1,
+          "istechnical": "0",
+          "isfinancial": "0",
+          "isaoc": "1",
+          "tender_typewise": null
+        },
+        {
+          "cityname": "chennai",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "11-04-2022",
+          "resultdate": "13-04-2022",
+          "resultdetails": "supply and installation of server",
+          "resultid": "2935564",
+          "encresultid": "ThbZAMXedVXePnr8kAv6tw==",
+          "resulttenderno": "2019_au_138842_1 ",
+          "resultvalue": "4446240.0",
+          "resultcompanyname": "anna university",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "the zigma technologies india (p) limited",
+          "isgem": "0",
+          "resulttenderprodid": "38885749",
+          "enctenderprodid": "+3kEFZT5ULDYfUfZlh+LKp54lNy+yZ5iN1Pe2V0gt9o=",
+          "like": -1,
+          "istechnical": "0",
+          "isfinancial": "0",
+          "isaoc": "1",
+          "tender_typewise": null
+        },
+        {
+          "cityname": "chennai",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "11-04-2022",
+          "resultdate": "13-04-2022",
+          "resultdetails": "supply and installation of storage",
+          "resultid": "2935565",
+          "encresultid": "0i7xL76SUCo9WVZ/tsOtKQ==",
+          "resulttenderno": "2019_au_138853_1 ",
+          "resultvalue": "1581254.0",
+          "resultcompanyname": "anna university",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "netweb tcehnologies india pvt ltd",
+          "isgem": "0",
+          "resulttenderprodid": "38885761",
+          "enctenderprodid": "SCy1/rOENiCszKHCDqd/4RIbBsgZDcqH5rPRMOdUE84=",
+          "like": -1,
+          "istechnical": "0",
+          "isfinancial": "0",
+          "isaoc": "1",
+          "tender_typewise": null
+        },
+        {
+          "cityname": "karaikudi",
+          "companysubindustryname": null,
+          "compnyindustryid": null,
+          "continent": "asia",
+          "countryname": "india",
+          "currencyid": "28",
+          "currsymbol": "₹",
+          "keywordname": null,
+          "productname": null,
+          "resultcontractawarddate": "16-10-2023",
+          "resultdate": "12-05-2024",
+          "resultdetails": "purchase of mid end server to cse department",
+          "resultid": "4652084",
+          "encresultid": "Dr5E7/fYAT5+kdcOIgkMnA==",
+          "resulttenderno": "2023_dote_306823_1",
+          "resultvalue": "531000.0",
+          "resultcompanyname": "department of technical education",
+          "statename": "tamil nadu",
+          "subindustryname": null,
+          "tenderwinby": "networks",
+          "isgem": "0",
+          "resulttenderprodid": "61715248",
+          "enctenderprodid": "Z7tHr121JSxI1CJhsR/UaNd5sh45vm4zp8k1iaRWW50=",
+          "like": -1,
+          "istechnical": "1",
+          "isfinancial": "1",
+          "isaoc": "0",
+          "tender_typewise": null
+        }
+      ],
+      "KeywordSynonymsList": null,
+      "ProcurementSynonymsList": null,
+      "companywisechart": null,
+      "locationwisechart": null,
+      "valuewisechart": null,
+      "mainactivetab": 0,
+      "globletype": "",
+      "orderbytype": null,
+      "categoryflag": "1",
+      "flag": 0,
+      "custdetailid": 0,
+      "Query": "{\"Query\":\"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\",\"isViewmore\":20,\"country\":\"test\"}",
+      "last_categoryflag": "compititors",
+      "last_rescount": 6,
+      "query_tablename": "tbl_tenderresult_migration_india",
+      "fromdata": 20,
+      "querytype": null,
+      "sub_no": 0,
+      "current_year": 0,
+      "tender_typewise": null,
+      "maxDate": null
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/CommonMethod/UserTenderResultTracking",
+    "data": {
+      "d": "12918375",
+      "historyId": "12295211"
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=1581254.0&userid=0&userdetailid=0&tenderprocid=38885761&referenceId=2935565",
+    "data": {
+      "itemPrice": 500.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=5908260.0&userid=0&userdetailid=0&tenderprocid=71134649&referenceId=6412556",
+    "data": {
+      "itemPrice": 500.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=6112400.0&userid=0&userdetailid=0&tenderprocid=0&referenceId=8696698",
+    "data": {
+      "itemPrice": 500.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=531000.0&userid=0&userdetailid=0&tenderprocid=61715248&referenceId=4652084",
+    "data": {
+      "itemPrice": 250.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=970773.0&userid=0&userdetailid=0&tenderprocid=51242886&referenceId=2976494",
+    "data": {
+      "itemPrice": 250.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  },
+  {
+    "url": "https://tendertiger.co.in/Order/GetResultAmount?contractValue=4446240.0&userid=0&userdetailid=0&tenderprocid=38885749&referenceId=2935564",
+    "data": {
+      "itemPrice": 500.0,
+      "discountPrice": 50.0,
+      "isDebited": 0
+    }
+  }
+]
