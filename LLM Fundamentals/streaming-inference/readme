@@ -1,0 +1,2 @@
+- start the app first: uvicorn app:app --reload
+- run the client to test streaming: python client.py
